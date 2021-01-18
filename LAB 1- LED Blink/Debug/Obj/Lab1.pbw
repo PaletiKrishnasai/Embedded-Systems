@@ -1,0 +1,114 @@
+[
+  {
+    "ID": "c:main.c@8@macro@GATING_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GATING_REG",
+    "location": {
+      "column": "9",
+      "line": "1",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "GATING_REG",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@59@macro@DIR_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIR_REG",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "DIR_REG",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@134@macro@DIG_FUNC_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DIG_FUNC_REG",
+    "location": {
+      "column": "9",
+      "line": "3",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "DIG_FUNC_REG",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@202@macro@DATA_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DATA_REG",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "DATA_REG",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@delayMS",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void delayMS(int)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "delayMS",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@383@F@delayMS@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@383@F@delayMS@j",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "j",
+    "location": {
+      "column": "12",
+      "line": "8",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "j",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@main",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "int main(void)",
+    "location": {
+      "column": "5",
+      "line": "17",
+      "path": "D:\\Embedded Systems\\main.c"
+    },
+    "name": "main",
+    "origin": "project_file",
+    "scope": null
+  }
+]
