@@ -10,7 +10,7 @@
          green, blue LEDs are connected. Also light each
          led with different delay 1 sec, 2sec, 3 sec.
 
-        How many cycle do we need to create the delay of 1
-        sec, 2 sec, and 3 sec. Read the datasheet and
-        identify the clock frequency on the GPIO port.
+         How many cycle do we need to create the delay of 1
+         sec, 2 sec, and 3 sec. Read the datasheet and
+         identify the clock frequency on the GPIO port.
 ```
