@@ -8,7 +8,7 @@ void delayMS(int n)
     int i, j;
 
     for (i = 0; i < n; i++)
-        for(j = 0; j < 1000; j++) // simulated clock 1Mhz ( loop takes 1 clocl cycle approx, so 1000 clock cycles = 1ms delay)
+        for(j = 0; j < 1000000; j++) //Simulation freq is 10Mhz and the delay function has 10 instructions per run (as seen in disassembly) hence 1000000 runs of loop needed
         {
         }
 
@@ -28,23 +28,22 @@ int main(void)
       
          DATA_REG = 0x00000002; // red
           
-          delayMS(1000); // keep red on for 1 sec 
+          delayMS(1); // keep red on for 1 sec 
           
           DATA_REG = 0x00000000; // switching it off
           
           DATA_REG = 0x00000004; // blue 
           
-          delayMS(2000);  // keep blue on for 2 secs
+          delayMS(2);  // keep blue on for 2 secs
 
           DATA_REG = 0x00000000; // switching it off
           DATA_REG = 0x00000008; // green
           
-          delayMS(3000); // keep green on for 3 secs 
+          delayMS(3); // keep green on for 3 secs 
            DATA_REG = 0x00000000; // switching it off
     }
     return 0;
     
  }
-
 
 
