@@ -1,0 +1,157 @@
+###############################################################################
+#
+# IAR ELF Linker V8.50.9.278/W32 for ARM                  02/Feb/2021  01:42:35
+# Copyright 2007-2020 IAR Systems AB.
+#
+#    Output file  =  D:\Embedded Systems\LAB 2\Debug\Exe\switch.out
+#    Map file     =  D:\Embedded Systems\LAB 2\Debug\List\switch.map
+#    Command line =
+#        -f C:\Users\PALETI~1\AppData\Local\Temp\EW79AF.tmp ("D:\Embedded
+#        Systems\LAB 2\Debug\Obj\main.o" --no_out_extension -o "D:\Embedded
+#        Systems\LAB 2\Debug\Exe\switch.out" --redirect _Printf=_PrintfFullNoMb
+#        --redirect _Scanf=_ScanfFullNoMb --map "D:\Embedded Systems\LAB
+#        2\Debug\List\switch.map" --config "C:\Program Files (x86)\IAR
+#        Systems\Embedded Workbench 8.4\arm\CONFIG\generic_cortex.icf"
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x7'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address   Size  Object
+  -------   ----         -------   ----  ------
+"A0":                              0x40
+  .intvec   ro code          0x0   0x40  vector_table_M.o [3]
+                          - 0x40   0x40
+
+"P1":                              0xb4
+  .text     ro code         0x40   0x50  main.o [1]
+  .text     ro code         0x90   0x1e  cmain.o [3]
+  .text     ro code         0xae    0x4  low_level_init.o [2]
+  .text     ro code         0xb2    0x4  exit.o [2]
+  .text     ro code         0xb6    0x2  vector_table_M.o [3]
+  .text     ro code         0xb8    0xa  cexit.o [3]
+  .text     ro code         0xc4   0x14  exit.o [4]
+  .text     ro code         0xd8   0x1c  cstartup_M.o [3]
+                          - 0xf4   0xb4
+
+"P2":                             0x400
+  CSTACK             0x2000'0000  0x400  <Block>
+    CSTACK  uninit   0x2000'0000  0x400  <Block tail>
+                   - 0x2000'0400  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+         0xf4     0x7'ffff  0x7'ff0c
+  0x2000'0400  0x2000'ffff    0xfc00
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  rw data
+    ------            -------  -------
+command line/config:
+    ----------------------------------
+    Total:
+
+D:\Embedded Systems\LAB 2\Debug\Obj: [1]
+    main.o                 80
+    ----------------------------------
+    Total:                 80
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    ----------------------------------
+    Total:                  8
+
+rt7M_tl.a: [3]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           28
+    vector_table_M.o       66
+    ----------------------------------
+    Total:                134
+
+shb_l.a: [4]
+    exit.o                 20
+    ----------------------------------
+    Total:                 20
+
+    Gaps                    2
+    Linker created               1'024
+--------------------------------------
+    Grand Total:          244    1'024
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                     Address  Size  Type      Object
+-----                     -------  ----  ----      ------
+?main                        0x91        Code  Gb  cmain.o [3]
+CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit         0x2000'0400         --   Gb  - Linker created -
+Region$$Table$$Base           0x0         --   Gb  - Linker created -
+Region$$Table$$Limit          0x0         --   Gb  - Linker created -
+__cmain                      0x91        Code  Gb  cmain.o [3]
+__exit                       0xc5  0x14  Code  Gb  exit.o [4]
+__iar_program_start          0xd9        Code  Gb  cstartup_M.o [3]
+__low_level_init             0xaf   0x4  Code  Gb  low_level_init.o [2]
+__vector_table                0x0        Data  Gb  vector_table_M.o [3]
+_call_main                   0x9d        Code  Gb  cmain.o [3]
+_exit                        0xb9        Code  Gb  cexit.o [3]
+_main                        0xa7        Code  Gb  cmain.o [3]
+exit                         0xb3   0x4  Code  Gb  exit.o [2]
+main                         0x41  0x50  Code  Gb  main.o [1]
+
+
+[1] = D:\Embedded Systems\LAB 2\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+    244 bytes of readonly  code memory
+  1'024 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
