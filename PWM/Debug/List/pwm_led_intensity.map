@@ -1,0 +1,168 @@
+###############################################################################
+#
+# IAR ELF Linker V8.50.9.278/W32 for ARM                  09/Mar/2021  11:23:08
+# Copyright 2007-2020 IAR Systems AB.
+#
+#    Output file  =  D:\Embedded Systems\PWM\Debug\Exe\pwm_led_intensity.out
+#    Map file     =  D:\Embedded Systems\PWM\Debug\List\pwm_led_intensity.map
+#    Command line =
+#        -f C:\Users\PALETI~1\AppData\Local\Temp\EW80C7.tmp ("D:\Embedded
+#        Systems\PWM\Debug\Obj\main.o" --no_out_extension -o "D:\Embedded
+#        Systems\PWM\Debug\Exe\pwm_led_intensity.out" --redirect
+#        _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb --map
+#        "D:\Embedded Systems\PWM\Debug\List\pwm_led_intensity.map" --config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.4\arm\config\linker\TexasInstruments\TM4C123GH6.icf" --semihosting
+#        --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because some modules are built with
+size limitations (and not runtime checking), and --advanced_heap
+was not specified.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x3'ffff] { ro };
+define block CSTACK with size = 4K, alignment = 8 { };
+define block HEAP with size = 8K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'7fff] {
+          rw, block CSTACK, block HEAP };
+
+No sections matched the following patterns:
+
+  rw  in "P2"
+
+
+  Section   Kind         Address    Size  Object
+  -------   ----         -------    ----  ------
+"A0":                               0x40
+  .intvec   ro code          0x0    0x40  vector_table_M.o [4]
+                          - 0x40    0x40
+
+"P1":                              0x1cc
+  .text     ro code         0x40   0x136  main.o [1]
+  .text     ro code        0x176     0x2  vector_table_M.o [4]
+  .text     ro code        0x178    0x22  fpinit_M.o [3]
+  .text     ro code        0x19c    0x1e  cmain.o [4]
+  .text     ro code        0x1ba     0x4  low_level_init.o [2]
+  .text     ro code        0x1be     0x4  exit.o [2]
+  .text     ro code        0x1c4     0xa  cexit.o [4]
+  .text     ro code        0x1d0    0x14  exit.o [5]
+  .text     ro code        0x1e4    0x1c  cstartup_M.o [4]
+  .rodata   const          0x200     0xc  main.o [1]
+                         - 0x20c   0x1cc
+
+"P2":                             0x1000
+  CSTACK             0x2000'0000  0x1000  <Block>
+    CSTACK  uninit   0x2000'0000  0x1000  <Block tail>
+                   - 0x2000'1000  0x1000
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x20c     0x3'ffff  0x3'fdf4
+  0x2000'1000  0x2000'7fff    0x7000
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+command line/config:
+    -------------------------------------------
+    Total:
+
+D:\Embedded Systems\PWM\Debug\Obj: [1]
+    main.o                310       12
+    -------------------------------------------
+    Total:                310       12
+
+dl7M_tln.a: [2]
+    exit.o                  4
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                  8
+
+m7M_tls.a: [3]
+    fpinit_M.o             34
+    -------------------------------------------
+    Total:                 34
+
+rt7M_tl.a: [4]
+    cexit.o                10
+    cmain.o                30
+    cstartup_M.o           28
+    vector_table_M.o       66
+    -------------------------------------------
+    Total:                134
+
+shb_l.a: [5]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    6
+    Linker created                        4'096
+-----------------------------------------------
+    Grand Total:          512       12    4'096
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                     Address  Size  Type      Object
+-----                     -------  ----  ----      ------
+?main                       0x19d        Code  Gb  cmain.o [4]
+CSTACK$$Base          0x2000'0000         --   Gb  - Linker created -
+CSTACK$$Limit         0x2000'1000         --   Gb  - Linker created -
+Region$$Table$$Base           0x0         --   Gb  - Linker created -
+Region$$Table$$Limit          0x0         --   Gb  - Linker created -
+__cmain                     0x19d        Code  Gb  cmain.o [4]
+__exit                      0x1d1  0x14  Code  Gb  exit.o [5]
+__iar_init_vfp              0x179        Code  Gb  fpinit_M.o [3]
+__iar_program_start         0x1e5        Code  Gb  cstartup_M.o [4]
+__low_level_init            0x1bb   0x4  Code  Gb  low_level_init.o [2]
+__vector_table                0x0        Data  Gb  vector_table_M.o [4]
+_call_main                  0x1a9        Code  Gb  cmain.o [4]
+_exit                       0x1c5        Code  Gb  cexit.o [4]
+_main                       0x1b3        Code  Gb  cmain.o [4]
+delayMs                     0x15d  0x1a  Code  Gb  main.o [1]
+exit                        0x1bf   0x4  Code  Gb  exit.o [2]
+main                         0x41  0xd6  Code  Gb  main.o [1]
+
+
+[1] = D:\Embedded Systems\PWM\Debug\Obj
+[2] = dl7M_tln.a
+[3] = m7M_tls.a
+[4] = rt7M_tl.a
+[5] = shb_l.a
+
+    512 bytes of readonly  code memory
+     12 bytes of readonly  data memory
+  4'096 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
